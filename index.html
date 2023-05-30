@@ -23,8 +23,12 @@
     <!-- Navbar -->
     <header>
       <nav class="container-nav">
-        <a class="logoContainer" href="#sectionInicio">
-          <img class="logo" src="assets/img/logoFondo.jpg" alt="Logo portafolio" />
+        <a class="logoContainer" href="#sectionSobreMi">
+          <img
+            class="logo"
+            src="assets/img/logoFondo.jpg"
+            alt="Logo portafolio"
+          />
         </a>
 
         <ul class="menu">
@@ -35,6 +39,7 @@
             <a class="nav-links" href="#sectionTecnologias">Tecnologías</a>
           </li>
           <li><a class="nav-links" href="#sectionProyectos">Proyectos</a></li>
+          <li><a class="nav-links" href="#sectionContacto">Contactame</a></li>
         </ul>
 
         <a class="btmMenu">
@@ -75,15 +80,9 @@
               <li>Música <i class="fa-solid fa-music"></i></li>
             </ul>
           </div>
-          <div class="curriculum-col">
-            <h3 class="title-item">Gustos</h3>
-            <ul>
-              <li></li>
-            </ul>
-          </div>
         </div>
         <a
-          class="btn-download"
+          class="btn"
           href="assets/pdf/Hoja-de-vida_Santiago-Gil.pdf"
           download="Hoja de vida Santiago Gil Ramirez"
           >Descargar CV</a
@@ -119,59 +118,49 @@
             <h3>Puro</h3>
             <div class="tecnologia">
               <img class="icon" src="assets/img/svg/html.svg" alt="" />
-              <span>HTML</span>
-              <progress value="90" max="100"></progress>
+              <progress class="html" value="90" max="100"></progress>
             </div>
             <div class="tecnologia">
               <img class="icon" src="assets/img/svg/css.svg" alt="" />
-              <span>CSS</span>
-              <progress value="90" max="100"></progress>
+              <progress class="css" value="90" max="100"></progress>
             </div>
             <div class="tecnologia">
               <img class="icon" src="assets/img/svg/Js.svg" alt="" />
-              <span>JS</span>
-              <progress value="80" max="100"></progress>
+              <progress class="js" value="70" max="100"></progress>
             </div>
             <div class="tecnologia">
               <img class="icon" src="assets/img/svg/Net.svg" alt="" />
-              <span>.Net</span>
-              <progress value="50" max="100"></progress>
+              <progress class="Net" value="50" max="100"></progress>
             </div>
           </div>
           <div class="col">
             <h3>Framework - Librerias</h3>
             <div class="tecnologia">
               <img class="icon" src="assets/img/svg/react.svg" alt="" />
-              <span>React JS</span>
-              <progress value="80" max="100"></progress>
+              <progress class="react" value="80" max="100"></progress>
             </div>
             <div class="tecnologia">
               <img class="icon" src="assets/img/svg/boostrap.svg" alt="" />
-              <span>Boostrap</span>
-              <progress value="90" max="100"></progress>
+              <progress class="boostrap" value="90" max="100"></progress>
             </div>
             <div class="tecnologia">
               <img class="icon" src="assets/img/svg/axios.svg" alt="" />
-              <span>Axios</span>
-              <progress value="85" max="100"></progress>
+              <progress class="axios" value="85" max="100"></progress>
             </div>
           </div>
           <div class="col">
             <h3>Bases de Datos - Versiona miento</h3>
             <div class="tecnologia">
               <img class="icon" src="assets/img/svg/sqlServer.svg" alt="" />
-              <span>SQL Server</span>
-              <progress value="70" max="100"></progress>
+              <progress class="sqlServer" value="70" max="100"></progress>
             </div>
             <div class="tecnologia">
               <img class="icon" src="assets/img/svg/phpMyAdmin.svg" alt="" />
-              <span>phpMyAdmin</span>
-              <progress value="80" max="100"></progress>
+              <progress class="phpMyAdmin" value="80" max="100"></progress>
             </div>
             <div class="tecnologia">
               <img class="icon" src="assets/img/svg/gitHub.svg" alt="" />
-              <span>Github</span>
-              <progress value="90" max="100"></progress>
+              <progress class="github" value="90" max="100"></progress>
             </div>
           </div>
         </div>
@@ -179,8 +168,7 @@
           <h3>En Aprendizaje</h3>
           <div class="tecnologia">
             <img class="icon" src="assets/img/svg/php.svg" alt="" />
-            <span>PHP</span>
-            <progress value="40" max="100"></progress>
+            <progress class="php" value="40" max="100"></progress>
           </div>
         </div>
       </section>
@@ -188,6 +176,178 @@
       <!-- Proyectos -->
       <section class="section-proyectos" id="sectionProyectos">
         <h2 class="title">Proyectos</h2>
+        <div class="proyectos">
+          <!-- Barberia -->
+          <div class="proyecto">
+            <img
+              src="assets/img/proyectos/barberia.png"
+              alt="Proyecto barberia"
+            />
+            <div class="info">
+              <div class="info-data">
+                <h3>Barberia</h3>
+                <p>
+                  Este proyecto se encuentra en <strong>desarollo</strong> el
+                  cual sera para poder reservar turnos en la barberia con la
+                  hora y barbero a su gusto y disposición.
+                </p>
+                <h4>Tecnologías utilizadas:</h4>
+                <ul>
+                  <li>PHP</li>
+                  <li>HTML</li>
+                  <li>JavaScript</li>
+                  <li>CSS</li>
+                </ul>
+              </div>
+              <div class="btns-proyecto">
+                <a
+                  href="https://github.com/Santigil0814/SG_Barber"
+                  target="_blank"
+                  class="btn-proyecto"
+                  >Ver en git hub</a
+                >
+                <button class="btn-proyecto" disabled>Próximamente</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proyecto SportStore -->
+          <div class="proyecto">
+            <img
+              src="assets/img/proyectos/Sport-Store.png"
+              alt="Proyecto Inventario SENA"
+            />
+            <div class="info">
+              <div class="info-data">
+                <h3>Sport Store</h3>
+                <p>
+                  Este un proyecto Front-end diseñado para una tienda deportiva
+                  donde se puede encontrar desde suplementos deportivos hasta
+                  equipos deportivos para deportistas de alto rendimiento.
+                </p>
+                <h4>Tecnologías utilizadas:</h4>
+                <ul>
+                  <li>React JS</li>
+                  <li>Boostrap</li>
+                  <li>Java Script</li>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                </ul>
+              </div>
+              <div class="btns-proyecto">
+                <a
+                  href="https://github.com/Santigil0814/Sport-Store"
+                  target="_blank"
+                  class="btn-proyecto"
+                  >Ver en git hub</a
+                >
+                <a
+                  href="https://sport-store.netlify.app/"
+                  target="_blank"
+                  class="btn-proyecto"
+                  >Ver proyecto</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Calculadora -->
+          <div class="proyecto">
+            <img
+              src="assets/img/proyectos/Calculator.png"
+              alt="Proyecto Calculadora IOS"
+            />
+            <div class="info">
+              <div class="info-data">
+                <h3>Calculador IOS</h3>
+                <p>
+                  Este es un proyecto de una calculadora con el estilo de un
+                  dispositivo <strong>IOS</strong> el cual es un proyecto
+                  personal.
+                </p>
+                <h4>Tecnologías utilizadas:</h4>
+                <ul>
+                  <li>HTM</li>
+                  <li>Java Script</li>
+                  <li>CSS</li>
+                </ul>
+              </div>
+              <div class="btns-proyecto">
+                <a
+                  href="https://github.com/Santigil0814/Calculator_IOS"
+                  target="_blank"
+                  class="btn-proyecto"
+                  >Ver en git hub</a
+                >
+                <a
+                  href="https://calculador-ios.netlify.app/"
+                  target="_blank"
+                  class="btn-proyecto"
+                  >Ver proyecto</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- PokeAPI -->
+          <div class="proyecto">
+            <img
+              src="assets/img/proyectos/PokeAPI.png"
+              alt="Proyecto Poke-API"
+            />
+            <div class="info">
+              <div class="info-data">
+                <h3>Poke-API</h3>
+                <p>
+                  Este proyecto fue realizado en el prroceso de formación en el
+                  <strong>SENA</strong> donde se pueden ver una lista de
+                  Pokemons, buscar y seleccionar su pokemon favorito.
+                </p>
+                <h4>Tecnologías utilizadas:</h4>
+                <ul>
+                  <li>React JS</li>
+                  <li>Boostrap</li>
+                  <li>Java Script</li>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                </ul>
+              </div>
+              <div class="btns-proyecto">
+                <a
+                  href="https://github.com/Santigil0814/Pokedex"
+                  target="_blank"
+                  class="btn-proyecto"
+                  >Ver en git hub</a
+                >
+                <a
+                  href="https://santiagopokedex.netlify.app/"
+                  target="_blank"
+                  class="btn-proyecto"
+                  >Ver proyecto</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contactame -->
+      <section class="section-contacto" id="sectionContacto">
+        <h2 class="title">Contactame</h2>
+        <div class="contacto">
+          <form action="" method="post">
+            <input type="text" name="" id="" placeholder="Ingrese su Nombre" />
+            <input type="email" name="" id="" placeholder="Ingrese su Email" />
+            <textarea
+              name=""
+              id=""
+              cols="30"
+              rows="5"
+              placeholder="Ingrese mensaje"
+            ></textarea>
+            <button class="btn-enviar" type="submit">Enviar</button>
+          </form>
+        </div>
       </section>
     </main>
 
@@ -216,7 +376,7 @@
           <i class="fa-brands fa-instagram"></i>
         </a>
       </div>
-      <p>Derechos reservados | <strong>Santiago Gil Ramirez © 2021</strong></p>
+      <p>Derechos reservados | <strong>Santiago Gil Ramirez © 2023</strong></p>
     </footer>
 
     <!-- Js -->

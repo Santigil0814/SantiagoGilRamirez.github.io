@@ -86,6 +86,23 @@ header .container-nav .logo {
 }
 
 /* Main */
+
+/* Botón */
+.btn {
+  background: var(--clr-gray);
+  color: var(--clr-white);
+  border: none;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+  text-decoration: none;
+}
+.btn:hover {
+  color: var(--clr-bg);
+  transition: 1s;
+}
+
 /* Sección sobre mí */
 .container-main .section-sobreMi {
   display: flex;
@@ -94,7 +111,6 @@ header .container-nav .logo {
   align-items: center;
   gap: 45px;
   padding: 100px 100px;
-  /* height: calc(100vh - 200px); */
 }
 .container-main .section-sobreMi h1 {
   text-align: center;
@@ -152,7 +168,6 @@ header .container-nav .logo {
   transition: 1s;
   color: var(--clr-hover);
 }
-/*  */
 .container-main .section-sobreMi .curriculum-container {
   display: grid;
   grid-template-columns: repeat(2, 50%);
@@ -160,23 +175,17 @@ header .container-nav .logo {
 }
 .container-main .section-sobreMi .curriculum-container .curriculum-col {
   border-radius: 10px;
-  /* color: var(--clr-lightGray); */
-  padding: 10px;
+  min-width: max-content;
+  padding: 20px;
   box-shadow: 0 0 5px 2px var(--clr-gray);
 }
-.container-main .section-sobreMi .btn-download {
-  background: var(--clr-gray);
-  color: var(--clr-white);
-  border: none;
-  padding: 15px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 1s;
-  text-decoration: none;
-}
-.container-main .section-sobreMi .btn-download:hover {
-  color: var(--clr-bg);
-  transition: 1s;
+.container-main .section-sobreMi .curriculum-container .curriculum-col ul {
+  list-style: none;
+  padding: 10px;
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 /* Sección tecnologias */
@@ -185,7 +194,6 @@ header .container-nav .logo {
   flex-direction: column;
   gap: 15px;
   padding: 100px 100px;
-  height: calc(100vh - 200px);
   color: var(--clr-white);
   background: var(--clr-lightGray);
 }
@@ -235,10 +243,153 @@ header .container-nav .logo {
 /* Sección proyectos */
 .container-main .section-proyectos {
   padding: 100px 100px;
-  height: calc(100vh - 200px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 .container-main .section-proyectos .title {
   text-align: center;
+}
+.container-main .section-proyectos .proyectos {
+  display: grid;
+  grid-template-columns: repeat(3, 33.3%);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.container-main .section-proyectos .proyectos .proyecto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 2px var(--clr-gray);
+}
+.container-main .section-proyectos .proyectos .proyecto img {
+  width: 100%;
+  height: 180px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  object-fit: contain;
+}
+.container-main .section-proyectos .proyectos .proyecto .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 5px;
+  background: var(--clr-bg-nav);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.container-main .section-proyectos .proyectos .proyecto .info-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-height: 187px;
+}
+.container-main .section-proyectos .proyectos .proyecto .info p {
+  font-size: 2fr;
+  text-size-adjust: inherit;
+}
+.container-main .section-proyectos .proyectos .proyecto .info ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+.container-main .section-proyectos .proyectos .proyecto .info li {
+  font-size: 2fr;
+  text-size-adjust: inherit;
+  font-weight: 500;
+}
+.container-main .section-proyectos .proyectos .proyecto .info .btns-proyecto {
+  display: flex;
+  gap: 10px;
+  padding: 5px;
+}
+.container-main .section-proyectos .proyectos .proyecto .info .btn-proyecto {
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 2fr;
+  text-size-adjust: inherit;
+  text-decoration: none;
+  color: var(--clr-white);
+  background: var(--clr-gray);
+  border: 2px solid var(--clr-bg-nav);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.container-main
+  .section-proyectos
+  .proyectos
+  .proyecto
+  .info
+  .btn-proyecto:hover {
+  background: var(--clr-white);
+  color: var(--clr-gray);
+}
+
+/* Sección contactame */
+.container-main .section-contacto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 100px 100px;
+  color: var(--clr-white);
+  background: var(--clr-lightGray);
+}
+.container-main .section-contacto .title {
+  text-align: center;
+}
+.container-main .section-contacto form {
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  background: var(--clr-gray);
+  color: var(--clr-white);
+  padding: 2fr;
+  gap: 10px;
+  border-radius: 10px;
+  min-width: max-content;
+  padding: 20px;
+  box-shadow: 0 0 10px 5px var(--clr-gray);
+}
+.container-main .section-contacto form input,
+.container-main .section-contacto form textarea {
+  background: none;
+  border: none;
+  border-bottom: 4px solid var(--clr-white);
+  resize: none;
+  color: var(--clr-white);
+  padding: 5px;
+  width: 100%;
+}
+.container-main .section-contacto form input::placeholder,
+.container-main .section-contacto form textarea::placeholder {
+  color: var(--clr-white);
+}
+.container-main .section-contacto .btn-enviar {
+  color: var(--clr-gray);
+  font-size: large;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+  text-decoration: none;
+}
+.container-main .section-contacto .btn-enviar:hover {
+  background-color: var(--clr-bg-nav);
+  color: var(--clr-white);
+  transition: 1s;
 }
 
 /* Footer */
@@ -325,8 +476,35 @@ footer .subir i:hover {
   header .container-nav .menu.active {
     right: 0;
   }
+
   /* Main */
+  /* Sobre mí */
+  .container-main .section-sobreMi {
+    padding: 100px 50px;
+  }
+  /* Tecnologias */
+  .container-main .section-tecnologias {
+    padding: 100px 50px;
+  }
+  .container-main .section-tecnologias .tecnologias {
+    grid-template-columns: auto;
+    gap: 20px;
+  }
+  /* Proyectos */
+  .container-main .section-proyectos {
+    padding: 100px 50px;
+  }
+  .container-main .section-proyectos .proyectos {
+    grid-template-columns: auto;
+  }
+  /* Contacto */
+  .container-main .section-contacto {
+    padding: 100px 50px;
+  }
   /* Footer */
+  footer {
+    padding: 40px 50px 20px ;
+  }
 }
 
 /* Animación */

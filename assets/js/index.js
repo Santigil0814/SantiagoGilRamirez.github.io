@@ -1,5 +1,6 @@
 const btnMenu = document.querySelector(".btmMenu");
 const menuNav = document.querySelector(".menu");
+const footer = document.querySelector("footer")
 
 // Abrir cerrar nav
 btnMenu.addEventListener("click", () => {
