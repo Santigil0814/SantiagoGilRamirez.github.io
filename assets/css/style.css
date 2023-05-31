@@ -275,12 +275,13 @@ header .container-nav .logo {
 }
 .container-main .section-proyectos .proyectos .proyecto .info {
   display: flex;
+  color: var(--clr-white);
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 10px;
   gap: 5px;
-  background: var(--clr-bg-nav);
+  background: var(--clr-gray);
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
@@ -290,7 +291,7 @@ header .container-nav .logo {
   align-items: center;
   justify-content: center;
   gap: 5px;
-  min-height: 187px;
+  min-height: 231px;
 }
 .container-main .section-proyectos .proyectos .proyecto .info p {
   font-size: 2fr;
@@ -319,16 +320,11 @@ header .container-nav .logo {
   text-decoration: none;
   color: var(--clr-white);
   background: var(--clr-gray);
-  border: 2px solid var(--clr-bg-nav);
+  border: .5px solid var(--clr-white);
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
-.container-main
-  .section-proyectos
-  .proyectos
-  .proyecto
-  .info
-  .btn-proyecto:hover {
+.container-main .section-proyectos .proyectos .proyecto .info .btn-proyecto:hover {
   background: var(--clr-white);
   color: var(--clr-gray);
 }
@@ -476,7 +472,6 @@ footer .subir i:hover {
   header .container-nav .menu.active {
     right: 0;
   }
-
   /* Main */
   /* Sobre mí */
   .container-main .section-sobreMi {
