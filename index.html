@@ -39,7 +39,7 @@
             <a class="nav-links" href="#sectionTecnologias">Tecnologías</a>
           </li>
           <li><a class="nav-links" href="#sectionProyectos">Proyectos</a></li>
-          <!-- <li><a class="nav-links" href="#sectionContacto">Contactame</a></li> -->
+          <li><a class="nav-links" href="#sectionContacto">Contactame</a></li>
         </ul>
 
         <a class="btmMenu">
@@ -332,24 +332,51 @@
       </section>
 
       <!-- Contactame -->
-      <!-- <section class="section-contacto" id="sectionContacto">
+      <section class="section-contacto" id="sectionContacto">
         <h2 class="title">Contactame</h2>
         <div class="contacto">
-          <form action="assets/php/correo.php" method="post">
-            <input type="text" name="nombre" id="" placeholder="Ingrese su Nombre" />
-            <input type="email" name="correo" id="" placeholder="Ingrese su Email" />
+          <form id="form">
+            <input
+              type="text"
+              name="nombre"
+              id=""
+              placeholder="Ingrese su Nombre"
+              required
+            />
+            <input
+              type="email"
+              name="correo"
+              id=""
+              placeholder="Ingrese su Email"
+              required
+            />
             <textarea
               name="mensaje"
               id=""
               cols="30"
               rows="5"
               placeholder="Ingrese mensaje"
+              required
             ></textarea>
-            <button class="btn-enviar" type="submit">Enviar</button>
+            <input
+              class="btn-enviar"
+              type="submit"
+              id="enviar"
+              value="Enviar."
+            />
           </form>
+
+          <script
+            type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+          ></script>
+
+          <script type="text/javascript">
+            emailjs.init("BJFGTyc1D0BPXcj91");
+          </script>
         </div>
-      </section> -->
-    </main> 
+      </section>
+    </main>
 
     <!-- Footer -->
     <footer>
@@ -381,5 +408,31 @@
 
     <!-- Js -->
     <script src="assets/js/index.js"></script>
+
+    <script>
+      const btn = document.getElementById("enviar");
+
+      document
+        .getElementById("form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          btn.value = "Enviando...";
+
+          const serviceID = "default_service";
+          const templateID = "template_swt10gs";
+
+          emailjs.sendForm(serviceID, templateID, this).then(
+            () => {
+              btn.value = "Mensaje enviado.";
+              alert("Se ha enviado correctamente");
+            },
+            (err) => {
+              btn.value = "Enviar.";
+              alert(JSON.stringify(err));
+            }
+          );
+        });
+    </script>
   </body>
 </html>

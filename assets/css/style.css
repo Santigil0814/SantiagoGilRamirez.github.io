@@ -372,6 +372,7 @@ header .container-nav .logo {
 }
 .container-main .section-contacto .btn-enviar {
   color: var(--clr-gray);
+  background-color: var(--clr-white);
   font-size: large;
   font-weight: bold;
   text-transform: uppercase;
