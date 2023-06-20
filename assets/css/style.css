@@ -7,6 +7,7 @@
   --clr-bg: #c6c2c2;
   --clr-hover: rgb(119, 106, 106);
   --clr-bg-nav: #6a6a6a;
+  --clr-bg-alert: rgb(75, 165, 75);
 }
 
 * {
@@ -86,6 +87,22 @@ header .container-nav .logo {
 }
 
 /* Main */
+
+/* alert */
+.succes {
+  position: fixed;
+  display: none;
+  right: 0;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin: 4px 4px 74px 4px;
+  padding: 5px 10px;
+  background-color: var(--clr-bg-nav);
+  border-radius: 10px;
+  color: var(--clr-white);
+  transition: 10s;
+}
 
 /* Botón */
 .btn {
@@ -320,11 +337,16 @@ header .container-nav .logo {
   text-decoration: none;
   color: var(--clr-white);
   background: var(--clr-gray);
-  border: .5px solid var(--clr-white);
+  border: 0.5px solid var(--clr-white);
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
-.container-main .section-proyectos .proyectos .proyecto .info .btn-proyecto:hover {
+.container-main
+  .section-proyectos
+  .proyectos
+  .proyecto
+  .info
+  .btn-proyecto:hover {
   background: var(--clr-white);
   color: var(--clr-gray);
 }
@@ -365,6 +387,7 @@ header .container-nav .logo {
   color: var(--clr-white);
   padding: 5px;
   width: 100%;
+  outline: none;
 }
 .container-main .section-contacto form input::placeholder,
 .container-main .section-contacto form textarea::placeholder {
@@ -445,7 +468,7 @@ footer .subir i:hover {
 }
 
 /* responsive */
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 770px) {
   /* Nabvar */
   header .container-nav .btmMenu {
     display: flex;
@@ -499,7 +522,7 @@ footer .subir i:hover {
   }
   /* Footer */
   footer {
-    padding: 40px 50px 20px ;
+    padding: 40px 50px 20px;
   }
 }
 

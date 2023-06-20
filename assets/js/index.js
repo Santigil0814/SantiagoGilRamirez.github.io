@@ -1,6 +1,6 @@
 const btnMenu = document.querySelector(".btmMenu");
 const menuNav = document.querySelector(".menu");
-const footer = document.querySelector("footer")
+const footer = document.querySelector("footer");
 
 // Abrir cerrar nav
 btnMenu.addEventListener("click", () => {
@@ -31,5 +31,3 @@ subir.addEventListener("click", () => {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 });
-
-// Enviar correo

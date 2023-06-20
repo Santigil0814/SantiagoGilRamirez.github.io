@@ -46,6 +46,12 @@
           <i class="fa-solid fa-bars"></i>
         </a>
       </nav>
+
+      <!-- alert -->
+      <div class="succes" id="succes">
+        <i class="fa-solid fa-circle-check"></i>
+        <p>Se ha enviado correctamente</p>
+      </div>
     </header>
 
     <!-- Cuerpo -->
@@ -341,6 +347,7 @@
               name="nombre"
               id=""
               placeholder="Ingrese su Nombre"
+              autocomplete="off"
               required
             />
             <input
@@ -348,6 +355,7 @@
               name="correo"
               id=""
               placeholder="Ingrese su Email"
+              autocomplete="off"
               required
             />
             <textarea
@@ -356,6 +364,7 @@
               cols="30"
               rows="5"
               placeholder="Ingrese mensaje"
+              autocomplete="off"
               required
             ></textarea>
             <input
@@ -425,7 +434,11 @@
           emailjs.sendForm(serviceID, templateID, this).then(
             () => {
               btn.value = "Mensaje enviado.";
-              alert("Se ha enviado correctamente");
+              document.getElementById("succes").style.display = "flex";
+
+              setTimeout(() => {
+                document.getElementById("succes").style.display = "none";
+              }, 3000);
             },
             (err) => {
               btn.value = "Enviar.";
